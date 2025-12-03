@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", to: "/#home" },
+  { name: "About", to: "/#about" },
+  { name: "Projects", to: "/#projects" },
+  { name: "Contact", to: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -17,11 +18,11 @@ export default function Navbar() {
         className="flex items-center justify-between p-4 md:px-8 lg:px-10"
       >
         <div className="flex flex-1">
-          <a href="#home" className="-m-1.5 p-1.5 flex items-center gap-2">
+          <Link to="/#home" className="-m-1.5 p-1.5 flex items-center gap-2">
             <span className="sr-only md:not-sr-only md:text-sm font-semibold text-gray-100">
               Athish 
             </span>
-          </a>
+          </Link>
         </div>
 
         <div className="flex lg:hidden">
@@ -51,24 +52,24 @@ export default function Navbar() {
         {/* Desktop navigation */}
         <div className="hidden lg:flex lg:gap-x-10">
           {navigation.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.to}
               className="text-sm font-semibold leading-6 text-white hover:text-orange-300 transition-colors"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* Desktop “CTA” on the right (e.g., Resume) */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="#resume"
+          <Link
+            to="/#resume"
             className="text-sm font-semibold leading-6 text-white hover:text-orange-300 transition-colors"
           >
             Resume <span aria-hidden="true">↗</span>
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -84,14 +85,14 @@ export default function Navbar() {
           {/* Slide-over panel */}
           <div className="ml-auto h-full w-full max-w-xs bg-gray-900 p-6 shadow-xl ring-1 ring-white/10">
             <div className="flex items-center justify-between">
-              <a href="#home" className="-m-1.5 p-1.5 flex items-center gap-2">
+              <Link to="/#home" className="-m-1.5 p-1.5 flex items-center gap-2">
                 <span className="h-9 w-9 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-sm font-bold text-white">
                   AR
                 </span>
                 <span className="text-sm font-semibold text-gray-100">
                   Athish 
                 </span>
-              </a>
+              </Link>
               <button
                 type="button"
                 onClick={() => setMobileOpen(false)}
@@ -118,24 +119,24 @@ export default function Navbar() {
             <div className="mt-6">
               <div className="space-y-1">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.to}
                     onClick={() => setMobileOpen(false)}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-white/5"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div className="mt-4 border-t border-white/10 pt-4">
-                <a
-                  href="#resume"
+                <Link
+                  to="/#resume"
                   onClick={() => setMobileOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-white/5"
                 >
                   Resume
-                </a>
+                </Link>
               </div>
             </div>
           </div>

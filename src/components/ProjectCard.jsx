@@ -1,13 +1,17 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ProjectCard({ project }) {
-  const { title, description = "", tech = [], link = "#" } = project;
+  const { title, description = "", tech = [], slug } = project;
   const [expanded, setExpanded] = useState(false);
 
+  const descriptionText = description || project.blurb || "";
+
   const preview =
-    expanded || description.length <= 140
-      ? description
-      : `${description.slice(0, 140)}...`;
+    expanded || descriptionText.length <= 140
+      ? descriptionText
+      : `${descriptionText.slice(0, 140)}...`;
+  const projectLink = slug ? `/projects/${slug}` : "#";
 
   return (
     <div className="bg-[#1A1712] border border-[#2B261F] rounded-xl p-6 h-full flex flex-col hover:border-[#C15903] hover:-translate-y-1 transition-all">
@@ -41,14 +45,12 @@ function ProjectCard({ project }) {
       </div>
 
       <div className="mt-6 flex items-center justify-between">
-        <a
-          href={link}
+        <Link
+          to={projectLink}
           className="text-sm font-semibold text-white hover:text-[#C15903] transition-colors"
-          target="_blank"
-          rel="noreferrer"
         >
-          View project ↗
-        </a>
+          View project →
+        </Link>
         <span className="text-xs text-gray-500">Interactive preview</span>
       </div>
     </div>
