@@ -17,34 +17,34 @@ function Contact()
         <p>
           <span className="text-[#8B8577]">Email:</span>{" "}
           <a
-            href="mailto:your.email@uncc.edu"
+            href="mailto:athishrs02@gmail.com"
             className="text-[#C15903] hover:text-[#E77B1A] transition-colors"
           >
-            your.email@uncc.edu
+            athishrs02@gmail.com
           </a>
         </p>
 
         <p>
           <span className="text-[#8B8577]">LinkedIn:</span>{" "}
           <a
-            href="https://www.linkedin.com/in/your-handle"
+            href="https://www.linkedin.com/in/athish-rs/"
             target="_blank"
             rel="noreferrer"
             className="text-[#C15903] hover:text-[#E77B1A] transition-colors"
           >
-            linkedin.com/in/your-handle
+            linkedin.com/in/athish-rs
           </a>
         </p>
 
         <p>
           <span className="text-[#8B8577]">GitHub:</span>{" "}
           <a
-            href="https://github.com/your-handle"
+            href="https://github.com/Athishrs"
             target="_blank"
             rel="noreferrer"
             className="text-[#C15903] hover:text-[#E77B1A] transition-colors"
           >
-            github.com/your-handle
+            github.com/Athishrs
           </a>
         </p>
       </div>

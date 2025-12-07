@@ -8,8 +8,7 @@ export const projects = [
       "Dishcovery is a smart recipe-finder that surfaces recipes by ingredients, cuisines, diet preferences, and calorie limits. I owned the backend: Spoonacular integration, queryable endpoints, clean data mapping, error handling, and close collaboration with frontend to keep contracts consistent and performant.",
     tech: [
       "Node.js",
-      "Express.js",
-      "Axios",
+      "JWT",
       "Spoonacular API",
       "Postman",
       "GitHub",
@@ -20,7 +19,7 @@ export const projects = [
     ],
     highlights: [
       "Spoonacular integration with search keywords, cuisine, calories, and dietary filters",
-      "Backend routes/controllers with Axios helpers and consistent naming",
+      "Backend routes/controllers with consistent naming and helper utilities",
       "Postman-tested endpoints with validated fields and calculated values",
       "Shared sample payloads to unblock frontend rendering of recipe cards/details",
     ],
@@ -28,14 +27,15 @@ export const projects = [
       role: "Backend Developer (API Integration & Data Pipeline)",
       teamSize: "6",
       duration: "August 2025 – December 2025",
-      figma: "[Insert your Figma link]",
+      figma:
+        "https://www.figma.com/design/Ml5Sl6SDhkvTxYdSZBPcYf/ThinkBridge_WireFrames_Week7?node-id=0-1&t=mHqAm59AZCfzDDhJ-1",
       live: "https://thinkbridgedishcovery.netlify.app",
-      repo: "https://github.com/username/recipe-finder",
+      repo: "https://github.com/Athishrs/ThinkBridge",
     },
     contributions: [
-      "Created Node.js/Express routes for recipes, nutrition details, and ingredient lists using Spoonacular.",
+      "Created Node.js API endpoints for recipes, nutrition details, and ingredient lists using Spoonacular.",
+      "Implemented sign up/sign in flows with JWT authentication and token validation.",
       "Implemented query params (keywords, cuisine, calories, dietary filters) with cleaned JSON for the UI.",
-      "Set up backend architecture: routes, controllers, Axios utilities, naming conventions, request patterns.",
       "Validated endpoints with Postman; verified fields, formats, and calculated values for frontend filters.",
       "Shared sample API responses and worked with UI devs to ensure recipe cards and details render correctly.",
     ],
@@ -45,17 +45,37 @@ export const projects = [
       challenges:
         "Handling Spoonacular’s large/inconsistent dataset, mapping complex responses, ensuring all parameters returned correct data, and debugging API key/cors issues across sprints.",
       skills:
-        "REST API integration, Node.js + Express backend development, Postman testing, JSON transformation, Git workflow, and multi-sprint team communication.",
+        "REST API integration, Node.js backend development, JWT auth, Postman testing, JSON transformation, Git workflow, and multi-sprint team communication.",
     },
     screenshots: [
       {
-        src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-        alt: "Placeholder — add Postman tests, backend structure, sample JSON, console logs, or UI screenshots.",
+        src: "/dishcovery%20images/home%20page.png",
+        alt: "Dishcovery home page with hero CTA and recipe filters.",
+      },
+      {
+        src: "/dishcovery%20images/Recipes%20page.png",
+        alt: "Recipe search grid with cuisine, diet, and time filters.",
+      },
+      {
+        src: "/dishcovery%20images/Recipe%20detail%20page.png",
+        alt: "Recipe detail view showing nutrition, ingredients, and tags.",
+      },
+      {
+        src: "/dishcovery%20images/Cooking%20instructions.png",
+        alt: "Cooking instructions page with numbered steps.",
+      },
+      {
+        src: "/dishcovery%20images/Guided%20cooking.png",
+        alt: "Guided cooking step with timer and next-step action.",
+      },
+      {
+        src: "/dishcovery%20images/Profile.png",
+        alt: "User profile form with dietary options and skill level selectors.",
       },
     ],
     links: {
       live: "https://thinkbridgedishcovery.netlify.app",
-      repo: "https://github.com/username/recipe-finder",
+      repo: "https://github.com/Athishrs/ThinkBridge",
     },
     timeline: "Aug–Dec 2025 • Team project",
     result:
