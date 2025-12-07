@@ -29,7 +29,7 @@ export const projects = [
       teamSize: "6",
       duration: "August 2025 – December 2025",
       figma: "[Insert your Figma link]",
-      live: "[Insert your deployed project link]",
+      live: "https://thinkbridgedishcovery.netlify.app",
       repo: "https://github.com/username/recipe-finder",
     },
     contributions: [
@@ -54,7 +54,7 @@ export const projects = [
       },
     ],
     links: {
-      live: "[Insert your deployed project link]",
+      live: "https://thinkbridgedishcovery.netlify.app",
       repo: "https://github.com/username/recipe-finder",
     },
     timeline: "Aug–Dec 2025 • Team project",
