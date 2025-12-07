@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="flex flex-1">
           <Link to="/#home" className="-m-1.5 p-1.5 flex items-center gap-2">
             <span className="sr-only md:not-sr-only md:text-sm font-semibold text-gray-100">
-              Athish 
+              Athish's Portfolio
             </span>
           </Link>
         </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
                   AR
                 </span>
                 <span className="text-sm font-semibold text-gray-100">
-                  Athish 
+                  Athish's Portfolio
                 </span>
               </Link>
               <button
