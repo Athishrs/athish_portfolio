@@ -5,7 +5,7 @@ export const projects = [
     blurb:
       "Smart recipe-finder backend powering ingredient, cuisine, diet, and calorie filters with clean JSON for the UI.",
     description:
-      "Dishcovery is a smart recipe-finder that surfaces recipes by ingredients, cuisines, diet preferences, and calorie limits. I owned the backend: Spoonacular integration, queryable endpoints, clean data mapping, error handling, and close collaboration with frontend to keep contracts consistent and performant.",
+      "Dishcovery is a modern, intelligent recipe-discovery platform that helps people answer a daily question: “What can I cook with the ingredients I already have?” It pairs a clean, responsive UI with performance-focused backend logic to surface recipes that match ingredients, dietary preferences, and cooking time. Users explore with dynamic filters, see high-quality images, ingredient breakdowns, and step-by-step instructions—whether they’re beginners or seasoned cooks.",
     tech: [
       "Node.js",
       "JWT",
