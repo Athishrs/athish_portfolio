@@ -21,8 +21,8 @@ export default function About() {
           looking for opportunities to learn, collaborate, and contribute to
           impactful work.
         </p>
+
       </div>
     </section>
   );
 }
-

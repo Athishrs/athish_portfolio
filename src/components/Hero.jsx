@@ -49,10 +49,44 @@ export default function Hero() {
             Contact Me →
           </a>
         </div>
+
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="https://www.linkedin.com/in/athish-rs/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center p-2 text-white hover:text-orange-200 transition"
+            aria-label="LinkedIn"
+          >
+            <svg
+              className="h-8 w-8"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94v5.66H9.37V9h3.41v1.56h.05c.48-.9 1.65-1.85 3.39-1.85 3.62 0 4.29 2.38 4.29 5.47v6.27ZM5.34 7.44a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z" />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/Athishrs"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center p-2 text-white hover:text-orange-200 transition"
+            aria-label="GitHub"
+          >
+            <svg
+              className="h-8 w-8"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.93c.57.1.79-.25.79-.56v-2c-3.2.69-3.87-1.37-3.87-1.37-.52-1.31-1.28-1.66-1.28-1.66-1.05-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.03 1.78 2.7 1.27 3.36.97.1-.75.4-1.27.72-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.5.12-3.13 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.5 3.18-1.18 3.18-1.18.64 1.63.24 2.83.12 3.13.75.81 1.2 1.84 1.2 3.1 0 4.43-2.68 5.4-5.24 5.69.41.35.77 1.05.77 2.13v3.15c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z" />
+            </svg>
+          </a>
+        </div>
       </div>
 
 
     </div>
   );
 }
-

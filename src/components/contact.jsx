@@ -145,40 +145,16 @@ function Contact() {
         </form>
 
         <div className="space-y-3 text-sm md:text-base">
-          <p className="text-[#C8C3B8]">Prefer email or social?</p>
-          <div className="space-y-2">
-            <p>
-              <span className="text-[#8B8577]">Email:</span>{" "}
-              <a
-                href="mailto:athishrs02@gmail.com"
-                className="text-[#C15903] hover:text-[#E77B1A] transition-colors"
-              >
-                athishrs02@gmail.com
-              </a>
-            </p>
-            <p>
-              <span className="text-[#8B8577]">LinkedIn:</span>{" "}
-              <a
-                href="https://www.linkedin.com/in/athish-rs/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-[#C15903] hover:text-[#E77B1A] transition-colors"
-              >
-                linkedin.com/in/athish-rs
-              </a>
-            </p>
-            <p>
-              <span className="text-[#8B8577]">GitHub:</span>{" "}
-              <a
-                href="https://github.com/Athishrs"
-                target="_blank"
-                rel="noreferrer"
-                className="text-[#C15903] hover:text-[#E77B1A] transition-colors"
-              >
-                github.com/Athishrs
-              </a>
-            </p>
-          </div>
+          <p className="text-[#C8C3B8]">Prefer email?</p>
+          <p>
+            <span className="text-[#8B8577]">Email:</span>{" "}
+            <a
+              href="mailto:athishrs02@gmail.com"
+              className="text-[#C15903] hover:text-[#E77B1A] transition-colors"
+            >
+              athishrs02@gmail.com
+            </a>
+          </p>
         </div>
       </div>
     </section>
