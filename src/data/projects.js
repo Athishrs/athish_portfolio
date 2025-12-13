@@ -47,12 +47,16 @@ export const projects = [
     },
     screenshots: [
       {
-        src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
-        alt: "Small Bizz dashboard showing pipeline and quick actions.",
+        src: "/SmallBizz/smallbizz-landing.png",
+        alt: "SmallBizz landing page hero with CTA, services nav, and beauty imagery.",
       },
       {
-        src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
-        alt: "Invoice and payment link flow for a local shop.",
+        src: "/SmallBizz/smallbizz-services.png",
+        alt: "SmallBizz services overview with welcome banner and category cards.",
+      },
+      {
+        src: "/SmallBizz/smallbizz-home-made-food.png",
+        alt: "SmallBizz Home Made Food category with cards for cakes, pickles, snacks, and tiffin.",
       },
     ],
     links: {
