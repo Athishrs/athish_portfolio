@@ -1,5 +1,69 @@
 export const projects = [
   {
+    slug: "small-bizz",
+    title: "Small Bizz",
+    blurb:
+      "Modern web platform that gives local businesses a polished, responsive site with clean navigation, services, and easy contact paths.",
+    description:
+      "Small Bizz helps neighborhood and local businesses establish a professional online presence without extra technical overhead. It focuses on a clean, responsive layout so visitors can quickly understand services, browse offerings, and reach out—while staying scalable for future additions like auth, dashboards, analytics, or payments.",
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "Git",
+      "GitHub",
+      "GitHub Pages",
+      ".env",
+    ],
+    highlights: [
+      "Responsive design tuned for desktop, tablet, and mobile for a consistent UX.",
+      "Clear sections for business details, services/offerings, and brand messaging.",
+      "Straightforward navigation and contact entry points to reduce friction.",
+      "Modular structure ready for future features (auth, dashboards, analytics, payments).",
+    ],
+    overview: {
+      role: "Full-Stack Developer (Solo)",
+      teamSize: "Solo",
+      duration: "Nov–Dec 2024",
+      figma: "",
+      live: "",
+      repo: "https://github.com/Athishrs/Small-BIzz",
+    },
+    contributions: [
+      "Designed and built a responsive layout with clean navigation for services, offerings, and contact details.",
+      "Set up Node.js + Express backend with modular structure and environment-based configuration.",
+      "Managed Git/GitHub workflows, resolving merge conflicts and keeping the repo deployment-ready.",
+      "Deployed via GitHub Pages/hosting, debugging domain and environment variable configuration.",
+    ],
+    journey: {
+      learned:
+        "Building and deploying a full web application with clean file organization and modular code.",
+      challenges:
+        "Debugging deployment and domain configuration issues while keeping the site performant and accessible.",
+      skills:
+        "Frontend-backend integration, Git workflows, environment management, and designing user-friendly layouts for real users.",
+    },
+    screenshots: [
+      {
+        src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+        alt: "Small Bizz dashboard showing pipeline and quick actions.",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+        alt: "Invoice and payment link flow for a local shop.",
+      },
+    ],
+    links: {
+      live: "",
+      repo: "https://github.com/Athishrs/Small-BIzz",
+    },
+    timeline: "Nov–Dec 2024 • Solo build",
+    result:
+      "Shipped a ready-to-grow foundation that gives small businesses a polished, responsive web presence and a path to layer in future capabilities.",
+  },
+  {
     slug: "dishcovery-smart-recipe-finder",
     title: "ThinkBridge – Dishcovery",
     blurb:
