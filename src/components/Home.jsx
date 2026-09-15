@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import Hero from "./Hero.jsx";
 import About from "./About.jsx";
-import ProjectList from "./ProjectList.jsx";
-import Contact from "./contact.jsx";
+import Work from "./Work.jsx";
+import Background from "./Background.jsx";
 import Footer from "./Footer.jsx";
 
 export default function Home({ initialSection }) {
@@ -15,18 +15,12 @@ export default function Home({ initialSection }) {
   }, [initialSection]);
 
   return (
-    <div className="px-4 md:px-8 pb-10 space-y-16">
-      <section id="home">
-        <Hero />
-      </section>
-
+    <div style={{ minHeight: "100vh", background: "var(--bg)", fontFamily: "'IBM Plex Sans', system-ui, sans-serif", color: "var(--ink)", overflowX: "hidden" }}>
+      <Hero />
+      <Work />
       <About />
-      <ProjectList title="Featured Projects" />
-      <Contact />
-
-      <section id="footer">
-        <Footer />
-      </section>
+      <Background />
+      <Footer />
     </div>
   );
 }

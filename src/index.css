@@ -1,19 +1,110 @@
 @import "tailwindcss";
+
+:root {
+  --bg: #f1f0ea;
+  --ink: #20241f;
+  --ink2: #2b302a;
+  --ink3: #3d423c;
+  --muted: #656b64;
+  --muted2: #777d76;
+  --line: #dedcd2;
+  --line2: #cfcdc2;
+  --line3: #d6d4c9;
+  --panel: #e8e7df;
+  --dark: #1f2422;
+  --dark-line: #3a423e;
+  --dark-muted: #b9c0b8;
+  --dark-accent: #8fb3a8;
+  --accent: #2f5d55;
+  --accent-ink: #f1f0ea;
+  --ghost: #e4e3d9;
+
+  /* Fluid spacing/type tokens — scale smoothly between mobile and desktop
+     instead of jumping at a single breakpoint. */
+  --pad-x: clamp(20px, 5.5vw, 44px);
+  --section-gap: clamp(64px, 11vw, 118px);
+  --content-max: clamp(1120px, 66vw, 1360px);
+
+  --fs-h1: clamp(2.25rem, 1.35rem + 3.6vw, 5rem);
+  --fs-h2: clamp(1.65rem, 1.3rem + 1.4vw, 2.5rem);
+  --fs-h3: clamp(1.7rem, 1.2rem + 2vw, 2.75rem);
+  --fs-tagline: clamp(1.1rem, 1rem + 0.4vw, 1.375rem);
+  --fs-stat: clamp(1.7rem, 1.3rem + 1.6vw, 2.625rem);
+  --fs-body: clamp(1rem, 0.95rem + 0.2vw, 1.22rem);
+}
+
 html {
   scroll-behavior: smooth;
 }
+
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  background-color: #13110E;
+  min-height: 100%;
+  background-color: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  position: relative;
+  /* Soft, warm wash instead of a flat, stark field — keeps wide desktop
+     viewports from reading as an empty white void around a narrow column. */
+  background-image:
+    radial-gradient(55vw 55vw at 100% 0%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 62%),
+    radial-gradient(45vw 45vw at 0% 70%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 58%),
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) 5%, transparent), transparent 22%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.font-display {
+  font-family: "Newsreader", Georgia, serif;
+}
+
+.font-mono-ed {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+.hairline {
+  border-color: var(--line);
+}
+
+::selection {
+  background: #cfe0d8;
+}
+
+.link-hover {
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+.link-hover:hover {
+  color: var(--accent) !important;
+}
+
+.pill-accent {
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+.pill-accent:hover {
+  background-color: color-mix(in srgb, var(--accent) 85%, black) !important;
+  transform: translateY(-1px);
+}
+
+.pill-outline:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
 }
 
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(14px);
   animation: fadeInUp 0.6s ease forwards;
 }
 
@@ -21,5 +112,26 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+@media (max-width: 860px) {
+  .grid-2col {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .ghost-num {
+    display: none !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav-row {
+    gap: 14px !important;
   }
 }

@@ -1,227 +1,232 @@
+// Flagship, end-to-end case studies — shown in "Selected work" on the homepage
+// and given their own /projects/:slug detail page.
 export const projects = [
   {
-    slug: "small-bizz",
-    title: "Small Bizz",
+    slug: "cortex",
+    num: "01",
+    kind: "Document intelligence",
+    title: "Cortex",
+    name: "Cortex",
+    tagline:
+      "Ask questions of your own documents, and get answers that point back to the page they came from.",
     blurb:
-      "Modern web platform that gives local businesses a polished, responsive site with clean navigation, services, and easy contact paths.",
+      "A retrieval-augmented generation API — upload documents, ask questions, get answers with cited sources — built to go deep on testing, CI/CD, Docker, and Kubernetes rather than just wiring up an LLM demo.",
     description:
-      "Small Bizz helps neighborhood and local businesses establish a professional online presence without extra technical overhead. It focuses on a clean, responsive layout so visitors can quickly understand services, browse offerings, and reach out—while staying scalable for future additions like auth, dashboards, analytics, or payments.",
-    tech: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Node.js",
-      "Express",
-      "Git",
-      "GitHub",
-      "GitHub Pages",
-      ".env",
-    ],
+      "Cortex is a Retrieval-Augmented Generation (RAG) API built with FastAPI, PostgreSQL/pgvector, Voyage AI, and Google Gemini — fully containerized, tested, and deployed via a real CI/CD pipeline into Kubernetes with Helm. Upload a document, it gets chunked and embedded, then every answer to a question is retrieved via vector similarity and returned with the sources it came from.",
+    problem:
+      "Search across a pile of internal documents is either keyword-literal or a black box. I wanted answers I could check.",
+    approach:
+      "A FastAPI retrieval service over PostgreSQL and pgvector: ingestion, recursive chunking, batched 1024-dimension embeddings and cosine-similarity retrieval, on an async routes → services → database split.",
+    outcome:
+      "Every response carries its sources. Containerized with Docker, running on Kubernetes, with GitHub Actions handling tests, image builds and deploys.",
+    shot: "query + cited sources UI screenshot",
+    tech: ["FastAPI", "PostgreSQL", "pgvector", "SQLAlchemy", "Voyage AI", "Gemini", "Docker", "Kubernetes", "Helm", "GitHub Actions"],
+    stack: ["FastAPI", "pgvector", "SQLAlchemy", "Voyage AI", "Gemini", "Kubernetes"],
     highlights: [
-      "Responsive design tuned for desktop, tablet, and mobile for a consistent UX.",
-      "Clear sections for business details, services/offerings, and brand messaging.",
-      "Straightforward navigation and contact entry points to reduce friction.",
-      "Modular structure ready for future features (auth, dashboards, analytics, payments).",
+      "Recursive chunking and batched 1024-dimension embeddings over PostgreSQL + pgvector.",
+      "Async routes → services → database architecture for a clean, testable retrieval pipeline.",
+      "Every answer returns with the source chunks it was grounded in.",
+      "Containerized with Docker; deployed to Kubernetes via Helm with GitHub Actions CI/CD.",
     ],
     overview: {
-      role: "Full-Stack Developer (Solo)",
+      role: "Solo Developer",
       teamSize: "Solo",
-      duration: "Nov–Dec 2024",
+      duration: "2026",
       figma: "",
       live: "",
-      repo: "https://github.com/Athishrs/Small-BIzz",
+      repo: "https://github.com/Athishrs/Cortex",
     },
     contributions: [
-      "Designed and built a responsive layout with clean navigation for services, offerings, and contact details.",
-      "Set up Node.js + Express backend with modular structure and environment-based configuration.",
-      "Managed Git/GitHub workflows, resolving merge conflicts and keeping the repo deployment-ready.",
-      "Deployed via GitHub Pages/hosting, debugging domain and environment variable configuration.",
+      "Built the FastAPI retrieval service: document ingestion, recursive chunking, and embedding pipeline.",
+      "Implemented cosine-similarity retrieval over pgvector with a clean routes → services → database split.",
+      "Wrote the CI/CD pipeline: automated tests, Docker image builds, and Kubernetes deploys via Helm.",
+      "Wired Voyage AI for embeddings and Gemini for answer generation, with citations traced back to source chunks.",
     ],
     journey: {
       learned:
-        "Building and deploying a full web application with clean file organization and modular code.",
+        "How to take a working RAG demo and turn it into something with real infrastructure — tests, CI/CD, containers, and orchestration.",
       challenges:
-        "Debugging deployment and domain configuration issues while keeping the site performant and accessible.",
+        "Getting chunking and retrieval tuned so answers stayed grounded in the right source material, and wiring a Kubernetes/Helm deploy pipeline from scratch.",
       skills:
-        "Frontend-backend integration, Git workflows, environment management, and designing user-friendly layouts for real users.",
+        "Vector search, RAG architecture, FastAPI, Docker, Kubernetes, Helm, and CI/CD pipeline design.",
     },
-    screenshots: [
-      {
-        src: "/SmallBizz/smallbizz-landing.png",
-        alt: "SmallBizz landing page hero with CTA, services nav, and beauty imagery.",
-      },
-      {
-        src: "/SmallBizz/smallbizz-services.png",
-        alt: "SmallBizz services overview with welcome banner and category cards.",
-      },
-      {
-        src: "/SmallBizz/smallbizz-home-made-food.png",
-        alt: "SmallBizz Home Made Food category with cards for cakes, pickles, snacks, and tiffin.",
-      },
-    ],
+    screenshots: [],
     links: {
       live: "",
-      repo: "https://github.com/Athishrs/Small-BIzz",
+      repo: "https://github.com/Athishrs/Cortex",
     },
-    timeline: "Nov–Dec 2024 • Solo build",
+    timeline: "2026 • Solo build",
     result:
-      "Shipped a ready-to-grow foundation that gives small businesses a polished, responsive web presence and a path to layer in future capabilities.",
+      "A working, production-shaped RAG service — cited answers, containerized, and deployed through a real CI/CD pipeline into Kubernetes.",
   },
   {
-    slug: "dishcovery-smart-recipe-finder",
-    title: "ThinkBridge – Dishcovery",
+    slug: "slotora",
+    num: "02",
+    kind: "Multi-tenant SaaS",
+    title: "Slotora",
+    name: "Slotora",
+    tagline:
+      "A booking platform where every business gets its own walled-off slice of the same system.",
     blurb:
-      "Smart recipe-finder backend powering ingredient, cuisine, diet, and calorie filters with clean JSON for the UI.",
+      "A full-stack, multi-tenant appointment booking platform: businesses onboard, list staff and services, and take bookings — all strictly scoped per tenant and secured with JWT auth.",
     description:
-      "Dishcovery is a modern, intelligent recipe-discovery platform that helps people answer a daily question: “What can I cook with the ingredients I already have?” It pairs a clean, responsive UI with performance-focused backend logic to surface recipes that match ingredients, dietary preferences, and cooking time. Users explore with dynamic filters, see high-quality images, ingredient breakdowns, and step-by-step instructions—whether they’re beginners or seasoned cooks.",
-    tech: [
-      "Node.js",
-      "JWT",
-      "Spoonacular API",
-      "Postman",
-      "GitHub",
-      "VS Code",
-      "React (team)",
-      "Vite (team)",
-      "TailwindCSS (team)",
-    ],
+      "Slotora is a full-stack, multi-tenant appointment booking platform built to demonstrate production-grade Java and React engineering. Users can discover businesses, book appointments with specific staff members, and manage their bookings — all secured with JWT authentication and correctly scoped so one tenant's data never leaks into another's.",
+    problem:
+      "Multi-tenancy is easy to get almost right and expensive to get wrong. One leaked query between tenants is the whole product.",
+    approach:
+      "Java 21 and Spring Boot over a five-entity schema with JWT auth, plus a three-step onboarding flow so an owner goes from signup to taking bookings without support.",
+    outcome:
+      "Nineteen automated tests passing against real containers via JUnit 5, Mockito and Testcontainers. Deployed on Elastic Beanstalk, RDS, S3 and CloudFront.",
+    shot: "tenant booking dashboard screenshot",
+    tech: ["Java 21", "Spring Boot", "React", "PostgreSQL", "JWT", "Testcontainers", "JUnit 5", "Mockito", "AWS Elastic Beanstalk", "RDS", "S3", "CloudFront"],
+    stack: ["Java 21", "Spring Boot", "React", "PostgreSQL", "Testcontainers", "AWS"],
     highlights: [
-      "Spoonacular integration with search keywords, cuisine, calories, and dietary filters",
-      "Backend routes/controllers with consistent naming and helper utilities",
-      "Postman-tested endpoints with validated fields and calculated values",
-      "Shared sample payloads to unblock frontend rendering of recipe cards/details",
+      "Five-entity multi-tenant schema with strict tenant scoping enforced at the data layer.",
+      "JWT authentication and a three-step self-serve onboarding flow for new businesses.",
+      "19 automated tests running against real containers via JUnit 5, Mockito, and Testcontainers.",
+      "Deployed on AWS: Elastic Beanstalk, RDS, S3, and CloudFront.",
     ],
     overview: {
-      role: "Backend Developer (API Integration & Data Pipeline)",
-      teamSize: "6",
-      duration: "August 2025 – December 2025",
-      figma:
-        "https://www.figma.com/design/Ml5Sl6SDhkvTxYdSZBPcYf/ThinkBridge_WireFrames_Week7?node-id=0-1&t=mHqAm59AZCfzDDhJ-1",
-      live: "https://thinkbridgedishcovery.netlify.app",
-      repo: "https://github.com/Athishrs/ThinkBridge",
-    },
-    contributions: [
-      "Created Node.js API endpoints for recipes, nutrition details, and ingredient lists using Spoonacular.",
-      "Implemented sign up/sign in flows with JWT authentication and token validation.",
-      "Implemented query params (keywords, cuisine, calories, dietary filters) with cleaned JSON for the UI.",
-      "Validated endpoints with Postman; verified fields, formats, and calculated values for frontend filters.",
-      "Shared sample API responses and worked with UI devs to ensure recipe cards and details render correctly.",
-    ],
-    journey: {
-      learned:
-        "Integrated a real-world third-party API, designed flexible routes for frontend consumption, and used Postman for thorough validation in a 6-person team.",
-      challenges:
-        "Handling Spoonacular’s large/inconsistent dataset, mapping complex responses, ensuring all parameters returned correct data, and debugging API key/cors issues across sprints.",
-      skills:
-        "REST API integration, Node.js backend development, JWT auth, Postman testing, JSON transformation, Git workflow, and multi-sprint team communication.",
-    },
-    screenshots: [
-      {
-        src: "/dishcovery%20images/home%20page.png",
-        alt: "Dishcovery home page with hero CTA and recipe filters.",
-      },
-      {
-        src: "/dishcovery%20images/Recipes%20page.png",
-        alt: "Recipe search grid with cuisine, diet, and time filters.",
-      },
-      {
-        src: "/dishcovery%20images/Recipe%20detail%20page.png",
-        alt: "Recipe detail view showing nutrition, ingredients, and tags.",
-      },
-      {
-        src: "/dishcovery%20images/Cooking%20instructions.png",
-        alt: "Cooking instructions page with numbered steps.",
-      },
-      {
-        src: "/dishcovery%20images/Guided%20cooking.png",
-        alt: "Guided cooking step with timer and next-step action.",
-      },
-      {
-        src: "/dishcovery%20images/Profile.png",
-        alt: "User profile form with dietary options and skill level selectors.",
-      },
-    ],
-    links: {
-      live: "https://thinkbridgedishcovery.netlify.app",
-      repo: "https://github.com/Athishrs/ThinkBridge",
-    },
-    timeline: "Aug–Dec 2025 • Team project",
-    result:
-      "Delivered reliable, cleaned recipe data to the frontend, enabling accurate filters and cards while keeping the API integration resilient.",
-  },
-  {
-    slug: "unc-charlotte-admissions-redesign",
-    title: "UNC Charlotte Admissions & Financial Aid Redesign",
-    blurb:
-      "High-fidelity redesign that centralizes finances, personalizes content, and clarifies terminology for a clearer, more trustworthy admissions experience.",
-    description:
-      "Redesigned UNC Charlotte’s admissions and financial aid experience to reduce confusion and build trust. The work centers on a unified financial hub (tuition, scholarships, assistantships/jobs, living costs), personalized filters, and clearer terminology/credibility cues so students can compare scholarships, estimate tuition, and understand requirements with confidence.",
-    tech: [
-      "Figma",
-      "High-fidelity prototyping",
-      "Design system tokens",
-      "Accessibility pass",
-      "Information architecture",
-      "Usability testing plan",
-    ],
-    highlights: [
-      "Reworked IA into a financial hub with clear paths to Compare / Estimate / Apply.",
-      "Key flows: scholarship discovery → comparison → tuition impact; admissions → program details → credibility checks.",
-      "Page upgrades: dedicated scholarship/assistantship pages, tuition estimator with semester breakdown, back/breadcrumbs, scrollable layouts.",
-      "Visual/accessibility: UNC Charlotte green/gold/white, higher contrast, larger hierarchy, consistent cards/buttons/filters, clearer affordances.",
-    ],
-    overview: {
-      role: "Product Designer (Solo)",
+      role: "Solo Developer",
       teamSize: "Solo",
-      duration: "Fall 2025",
-      figma:
-        "https://www.figma.com/design/EToax7P94y0vN4WJOzvvlW/High-FIdelity?node-id=0-1&t=iY2Rd9v3RdSb5d32-1",
-      live: "",
-      repo: "",
+      duration: "2026",
+      figma: "",
+      live: "https://slotora-steel.vercel.app",
+      repo: "https://github.com/Athishrs/slotora",
     },
     contributions: [
-      "Centralized tuition, scholarships, assistantships/jobs, and living costs into one hub with clear paths to Compare / Estimate / Apply.",
-      "Designed scholarship discovery → comparison → tuition impact flows with personalized filtering.",
-      "Built tuition estimator with semester-wise breakdown and clearer back/breadcrumb controls to keep users oriented.",
-      "Refined visual system (UNC Charlotte green/gold/white) with higher contrast, consistent cards/buttons/filters, and clearer affordances.",
-      "Ran 3 usability sessions (international applicants); improved task success and perceived credibility; identified need for stronger credibility signals and deeper terminology support.",
+      "Designed the multi-tenant schema and enforced tenant isolation across every query.",
+      "Built JWT-based auth and a three-step onboarding flow for business owners.",
+      "Wrote 19 automated tests against real containers using JUnit 5, Mockito, and Testcontainers.",
+      "Deployed the full stack to AWS (Elastic Beanstalk, RDS, S3, CloudFront).",
     ],
     journey: {
       learned:
-        "How to pair admissions clarity with financial transparency while keeping flows scannable and conversion-friendly.",
+        "How to design a multi-tenant data model that's genuinely safe by default, not just safe by convention.",
       challenges:
-        "Combining academic, financial, and deadline content without overwhelming first-time visitors.",
+        "Making sure tenant isolation held under every query path, and getting a smooth self-serve onboarding flow without any manual setup step.",
       skills:
-        "High-fidelity UI design, component systems, IA restructuring, accessibility-first layout decisions, and prototype storytelling.",
+        "Java/Spring Boot backend design, multi-tenant architecture, JWT auth, container-based integration testing, and AWS deployment.",
     },
-    screenshots: [
-      {
-        src: "/uncc/uncc-home.png",
-        alt: "Redesigned UNC Charlotte admissions landing page with clear pathways to financial info and applications.",
-      },
-      {
-        src: "/uncc/uncc-financial-hub.png",
-        alt: "Unified financial hub showing tuition, scholarships, assistantships, and living costs.",
-      },
-      {
-        src: "/uncc/uncc-scholarship-compare.png",
-        alt: "Scholarship comparison view with personalized filters and impact on tuition.",
-      },
-      {
-        src: "/uncc/uncc-terminology.png",
-        alt: "Terminology and credibility cues clarifying financial aid and admissions terms.",
-      },
+    screenshots: [],
+    links: {
+      live: "https://slotora-steel.vercel.app",
+      repo: "https://github.com/Athishrs/slotora",
+    },
+    timeline: "2026 • Solo build",
+    result:
+      "A production-shaped multi-tenant SaaS booking platform, tested against real containers and deployed live on AWS.",
+  },
+  {
+    slug: "roommate-harmony",
+    num: "03",
+    kind: "Household coordination",
+    title: "Roommate Harmony",
+    name: "Roommate Harmony",
+    tagline:
+      "Tooling for the things housemates actually argue about: money, chores and whose turn it is.",
+    blurb:
+      "A full-stack app for shared household life — expense splitting, chore scheduling, and issue tracking — with every piece of data strictly scoped to its group.",
+    description:
+      "Roommate Harmony is a full-stack web application for managing shared household life — expenses, chores, hangouts, and issue tracking — built with a strict Controller → Service backend and group-scoped data so people always see the right balances.",
+    problem:
+      "Shared-house apps break down when data isn't properly scoped to a group. People see the wrong balances and stop trusting it.",
+    approach:
+      "Group-scoped expense splitting, chore scheduling and issue tracking on a strict Controller → Service backend with Prisma over Supabase. JWT auth with HTTP-only cookies, bcrypt and route guards.",
+    outcome:
+      "Covered end to end with Supertest API tests and Playwright browser tests, deployed across Vercel, Render and Supabase.",
+    shot: "expense split + chore schedule screenshot",
+    tech: ["React 18", "Vite", "Shadcn UI", "Express", "Prisma", "Supabase", "JWT", "bcrypt", "Supertest", "Playwright", "Vercel", "Render"],
+    stack: ["React 18", "Vite", "Shadcn UI", "Express", "Prisma", "Playwright"],
+    highlights: [
+      "Group-scoped expense splitting, chore scheduling, and issue tracking in one app.",
+      "Strict Controller → Service backend architecture with Prisma over Supabase.",
+      "JWT auth via HTTP-only cookies, bcrypt password hashing, and route guards.",
+      "End-to-end coverage: Supertest for the API, Playwright for the browser.",
     ],
+    overview: {
+      role: "Solo Developer",
+      teamSize: "Solo",
+      duration: "2026",
+      figma: "",
+      live: "",
+      repo: "https://github.com/Athishrs/Roomate-harmony-web",
+    },
+    contributions: [
+      "Built group-scoped expense splitting, chore scheduling, and issue tracking features.",
+      "Designed the Controller → Service backend architecture on Prisma over Supabase.",
+      "Implemented JWT auth with HTTP-only cookies, bcrypt hashing, and route guards.",
+      "Wrote Supertest API tests and Playwright browser tests, then deployed to Vercel, Render, and Supabase.",
+    ],
+    journey: {
+      learned:
+        "How to keep multi-user shared-data apps trustworthy by scoping everything to a group at the architecture level, not just the UI.",
+      challenges:
+        "Getting balances and chore state to always reflect the right group, and building auth that was simple to use but genuinely secure.",
+      skills:
+        "React/Vite frontend architecture, Prisma/Supabase data modeling, JWT auth, and end-to-end testing with Playwright and Supertest.",
+    },
+    screenshots: [],
     links: {
       live: "",
-      repo: "",
+      repo: "https://github.com/Athishrs/Roomate-harmony-web",
     },
-    timeline: "Fall 2025 • Solo redesign",
+    timeline: "2026 • Solo build",
     result:
-      "Delivered a clearer admissions + financial aid journey that emphasizes cost transparency, eligibility clarity, and a guided application path.",
+      "A trustworthy, well-tested household coordination app — group-scoped data, full auth, and end-to-end test coverage.",
   },
 ];
 
 export function getProjectBySlug(slug) {
   return projects.find((project) => project.slug === slug);
 }
+
+// Everything else that's public on GitHub — smaller, earlier, or class projects.
+// Linked out directly rather than given full case-study pages.
+export const otherProjects = [
+  {
+    name: "SmallBizz",
+    description:
+      "A vendor–customer platform for one-to-one negotiation, messaging, and reviews in a marketplace-style workflow.",
+    tech: ["Node.js", "Express", "JavaScript"],
+    repo: "https://github.com/Athishrs/Small-BIzz",
+  },
+  {
+    name: "ThinkBridge — Dishcovery",
+    description:
+      "Team redesign of a recipe-finder platform: ingredient/cuisine/diet filters backed by the Spoonacular API.",
+    tech: ["React", "Node.js", "Vite", "Tailwind"],
+    repo: "https://github.com/Athishrs/ThinkBridge",
+  },
+  {
+    name: "Weather Predictor",
+    description:
+      "A machine learning model predicting temperature and precipitation for Chennai, India's coastal climate.",
+    tech: ["Python", "Machine Learning"],
+    repo: "https://github.com/Athishrs/Weather_predictor",
+  },
+  {
+    name: "Movies App",
+    description: "A movie browsing app built as a Jupyter Notebook exploration project.",
+    tech: ["Python", "Jupyter"],
+    repo: "https://github.com/Athishrs/MoviesApp",
+  },
+  {
+    name: "GitHub Web Scraping",
+    description: "Extracts top topics from GitHub and lists their most popular repositories.",
+    tech: ["Python", "Web Scraping"],
+    repo: "https://github.com/Athishrs/Github_webscraping",
+  },
+  {
+    name: "Expense Tracker",
+    description: "A simple tracker for logging spend descriptions and amounts.",
+    tech: ["JavaScript"],
+    repo: "https://github.com/Athishrs/expense-tracker",
+  },
+  {
+    name: "Simon Game",
+    description: "The classic Simon memory game, built with jQuery.",
+    tech: ["JavaScript", "jQuery"],
+    repo: "https://github.com/Athishrs/Simon-game",
+  },
+];

@@ -1,92 +1,99 @@
+const heroFacts = [
+  { big: "10.4s → 0.25s", label: "API RESPONSE TIME, AFTER ONE\nRETRY BOTTLENECK FIX" },
+  { big: "3,000", label: "LINES OF LEGACY CODE REMOVED\nCONSOLIDATING TWO BACKENDS" },
+  { big: "4.0", label: "GPA, MS INFORMATION TECHNOLOGY\nUNC CHARLOTTE" },
+];
+
 export default function Hero() {
-  const name = "Athish";
-  const role = "Master's in IT @ UNC Charlotte · Web & Backend Focused";
-  const tagline =
-    "I build web, data, and UX-driven experiences with React, APIs, and solid fundamentals.";
-  const location = "Charlotte, NC";
-
   return (
-    <div className="relative isolate min-h-screen flex py-30 justify-center px-6 lg:px-8">
-
-
-      {/* CONTENT — CENTERED */}
-      <div className="my-4.5px mx-auto max-w-2xl text-center">
-
-        {/* Location badge */}
-        <div className="mb-6 flex justify-center">
-          <div className="rounded-full px-4 py-1 text-sm text-orange-300 ring-1 ring-orange-400/30">
-            {location}
-          </div>
+    <section id="top" style={{ maxWidth: "var(--content-max)", margin: "0 auto", padding: "clamp(56px, 10vw, 92px) var(--pad-x) 0" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1.35fr 1fr",
+          gap: "clamp(32px, 5vw, 56px)",
+          alignItems: "end",
+        }}
+        className="grid-2col"
+      >
+        <div>
+          <h1
+            style={{
+              fontFamily: "'Newsreader', Georgia, serif",
+              fontWeight: 200,
+              fontSize: "var(--fs-h1)",
+              lineHeight: 1.06,
+              letterSpacing: "-0.03em",
+              margin: "0 0 clamp(20px, 3vw, 30px)",
+              textWrap: "pretty",
+            }}
+          >
+            The problems that live{" "}
+            <em style={{ fontWeight: 300, fontStyle: "italic", color: "var(--accent)" }}>behind</em> the interface.
+          </h1>
+          <p style={{ fontSize: "var(--fs-body)", lineHeight: 1.6, color: "var(--ink3)", margin: 0, maxWidth: 560, textWrap: "pretty" }}>
+            I&rsquo;m Athish — a full-stack developer drawn to databases, APIs, deploy pipelines, and the auth flow
+            nobody wants to open. Two years on teams small enough that all of it was mine to figure out.
+          </p>
         </div>
-
-        {/* NAME */}
-        <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
-          {name}
-        </h1>
-
-        {/* ROLE */}
-        <p className="mt-4 text-lg font-semibold text-orange-400 sm:text-xl">
-          {role}
-        </p>
-
-        {/* TAGLINE */}
-        <p className="mt-6 text-lg text-gray-300 sm:text-xl">
-          {tagline}
-        </p>
-
-        {/* BUTTONS */}
-        <div className="mt-10 flex items-center justify-center gap-x-6">
-          <a
-            href="#projects"
-            className="rounded-md bg-orange-500 px-4 py-2.5 text-sm font-semibold text-black shadow hover:bg-orange-400 transition"
-          >
-            View Projects
-          </a>
-          <a
-            href="#contact"
-            className="text-sm font-semibold text-orange-300 hover:text-orange-200"
-          >
-            Contact Me →
-          </a>
-        </div>
-
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="https://www.linkedin.com/in/athish-rs/"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center p-2 text-white hover:text-orange-200 transition"
-            aria-label="LinkedIn"
-          >
-            <svg
-              className="h-8 w-8"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94v5.66H9.37V9h3.41v1.56h.05c.48-.9 1.65-1.85 3.39-1.85 3.62 0 4.29 2.38 4.29 5.47v6.27ZM5.34 7.44a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z" />
-            </svg>
-          </a>
-          <a
-            href="https://github.com/Athishrs"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center p-2 text-white hover:text-orange-200 transition"
-            aria-label="GitHub"
-          >
-            <svg
-              className="h-8 w-8"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.93c.57.1.79-.25.79-.56v-2c-3.2.69-3.87-1.37-3.87-1.37-.52-1.31-1.28-1.66-1.28-1.66-1.05-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.03 1.78 2.7 1.27 3.36.97.1-.75.4-1.27.72-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.5.12-3.13 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.5 3.18-1.18 3.18-1.18.64 1.63.24 2.83.12 3.13.75.81 1.2 1.84 1.2 3.1 0 4.43-2.68 5.4-5.24 5.69.41.35.77 1.05.77 2.13v3.15c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z" />
-            </svg>
-          </a>
+        <div style={{ borderLeft: "1px solid var(--line)", paddingLeft: "clamp(22px, 3vw, 34px)", display: "flex", flexDirection: "column", gap: "clamp(18px, 2.5vw, 26px)" }}>
+          {heroFacts.map((f) => (
+            <div key={f.label}>
+              <div
+                style={{
+                  fontFamily: "'Newsreader', Georgia, serif",
+                  fontSize: "var(--fs-stat)",
+                  lineHeight: 1,
+                  letterSpacing: "-0.025em",
+                  color: "var(--accent)",
+                }}
+              >
+                {f.big}
+              </div>
+              <div
+                style={{
+                  fontFamily: "'IBM Plex Mono', monospace",
+                  fontSize: 11.5,
+                  lineHeight: 1.6,
+                  color: "var(--muted)",
+                  marginTop: 9,
+                  letterSpacing: "0.03em",
+                  whiteSpace: "pre-line",
+                }}
+              >
+                {f.label}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
-
-    </div>
+      <div
+        style={{
+          marginTop: "clamp(40px, 6vw, 74px)",
+          height: "clamp(180px, 28vw, 300px)",
+          border: "1px solid var(--line)",
+          borderRadius: 3,
+          backgroundImage:
+            "repeating-linear-gradient(135deg, var(--panel) 0px, var(--panel) 8px, var(--bg) 8px, var(--bg) 16px)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "'IBM Plex Mono', monospace",
+            fontSize: 12,
+            color: "var(--muted2)",
+            background: "var(--bg)",
+            padding: "8px 14px",
+            border: "1px solid var(--line)",
+          }}
+        >
+          wide screenshot or workspace photo
+        </span>
+      </div>
+    </section>
   );
 }
