@@ -6,7 +6,7 @@
   --ink2: #2b302a;
   --ink3: #3d423c;
   --muted: #656b64;
-  --muted2: #777d76;
+  --muted2: #626760; /* darkened from #777d76 — that failed WCAG AA (~3.7:1) for the small mono labels it's used on */
   --line: #dedcd2;
   --line2: #cfcdc2;
   --line3: #d6d4c9;
