@@ -16,7 +16,7 @@ export default function Background() {
           <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 12, lineHeight: 1.7, color: "var(--muted)", margin: 0 }}>
             Full detail on the{" "}
             <a
-              href="/resume.pdf"
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
               target="_blank"
               rel="noreferrer"
               className="link-hover"
