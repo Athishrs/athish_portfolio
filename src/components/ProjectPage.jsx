@@ -179,7 +179,7 @@ export default function ProjectPage() {
               {project.screenshots.map((shot) => (
                 <figure key={shot.src} className="border hairline overflow-hidden">
                   <img
-                    src={shot.src}
+                    src={`${import.meta.env.BASE_URL}${shot.src.replace(/^\//, "")}`}
                     alt={shot.alt ?? "Project screenshot"}
                     className="w-full object-cover"
                     loading="lazy"

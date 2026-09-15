@@ -28,7 +28,7 @@ export default function Work() {
             color: "var(--muted2)",
           }}
         >
-          Three, built end to end
+          Five, built end to end
         </span>
       </div>
 
