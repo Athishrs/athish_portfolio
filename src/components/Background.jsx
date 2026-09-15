@@ -1,5 +1,11 @@
 const history = [
   { what: "Software Engineer Intern, Holiday Channel", when: "2026 — now" },
+  {
+    what: "Teaching Assistant, Integrated Design — UNC Charlotte",
+    when: "Jan 2025 — May 2026",
+    detail:
+      "Guided students building accessible, WCAG AA–compliant UI/UX across the full project lifecycle — code review, grading, and running group discussions.",
+  },
   { what: "MS Information Technology, UNC Charlotte", when: "2024 — 2026" },
   { what: "Software Engineer, AAtek", when: "2022 — 2024" },
   { what: "Software Engineer, Velocita Racing", when: "2021 — 2022" },
@@ -31,19 +37,29 @@ export default function Background() {
             <div
               key={h.what}
               style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "baseline",
-                gap: 24,
                 padding: "16px 0",
                 borderBottom: "1px solid var(--line)",
-                flexWrap: "wrap",
               }}
             >
-              <span style={{ fontSize: 16.5, color: "var(--ink2)" }}>{h.what}</span>
-              <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 11.5, color: "var(--muted2)", whiteSpace: "nowrap" }}>
-                {h.when}
-              </span>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "baseline",
+                  gap: 24,
+                  flexWrap: "wrap",
+                }}
+              >
+                <span style={{ fontSize: 16.5, color: "var(--ink2)" }}>{h.what}</span>
+                <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 11.5, color: "var(--muted2)", whiteSpace: "nowrap" }}>
+                  {h.when}
+                </span>
+              </div>
+              {h.detail ? (
+                <p style={{ margin: "8px 0 0", fontSize: 14, lineHeight: 1.55, color: "var(--muted)", maxWidth: 620, textWrap: "pretty" }}>
+                  {h.detail}
+                </p>
+              ) : null}
             </div>
           ))}
         </div>

@@ -11,6 +11,10 @@ const principles = [
     title: "Caching is a last step, not a first one.",
     body: "On AAtek's robot telemetry platform I tuned PostgreSQL queries first, then added Redis where it earned its keep. Together they took 70% off status-endpoint latency and halved dashboard load time.",
   },
+  {
+    title: "Accessibility isn't a checklist someone else runs.",
+    body: "TA'ing Integrated Design at UNC Charlotte meant reviewing other students' UI code against WCAG AA all semester — where contrast quietly fails, where a component decision comes back to bite later. I run that same review on my own work now; this site's muted text color exists because it didn't clear 4.5:1 the first time.",
+  },
 ];
 
 export default function About() {
@@ -31,7 +35,7 @@ export default function About() {
               How I work
             </span>
             <h2 style={{ fontFamily: "'Newsreader', Georgia, serif", fontWeight: 200, fontSize: "var(--fs-h2)", lineHeight: 1.1, letterSpacing: "-0.028em", margin: "18px 0 0" }}>
-              Three habits that keep showing up.
+              Four habits that keep showing up.
             </h2>
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
