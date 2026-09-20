@@ -67,33 +67,6 @@ export default function Hero() {
           ))}
         </div>
       </div>
-
-      <div
-        style={{
-          marginTop: "clamp(40px, 6vw, 74px)",
-          height: "clamp(180px, 28vw, 300px)",
-          border: "1px solid var(--line)",
-          borderRadius: 3,
-          backgroundImage:
-            "repeating-linear-gradient(135deg, var(--panel) 0px, var(--panel) 8px, var(--bg) 8px, var(--bg) 16px)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <span
-          style={{
-            fontFamily: "'IBM Plex Mono', monospace",
-            fontSize: 12,
-            color: "var(--muted2)",
-            background: "var(--bg)",
-            padding: "8px 14px",
-            border: "1px solid var(--line)",
-          }}
-        >
-          wide screenshot or workspace photo
-        </span>
-      </div>
     </section>
   );
 }
