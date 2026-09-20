@@ -135,3 +135,24 @@ a {
     gap: 14px !important;
   }
 }
+
+/* Nav: inline links on wide screens, hamburger + dropdown panel below 640px */
+.nav-hamburger {
+  display: none;
+}
+@media (max-width: 640px) {
+  .nav-links {
+    display: none !important;
+  }
+  .nav-hamburger {
+    display: flex !important;
+  }
+}
+.nav-mobile-panel {
+  display: none;
+}
+@media (max-width: 640px) {
+  .nav-mobile-panel {
+    display: flex !important;
+  }
+}

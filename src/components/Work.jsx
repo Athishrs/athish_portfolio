@@ -126,43 +126,24 @@ export default function Work() {
                 </div>
               </div>
               <div>
-                <div
-                  style={{
-                    aspectRatio: p.cardImage ? "16 / 10" : "4 / 3",
-                    border: "1px solid var(--line)",
-                    borderRadius: 3,
-                    overflow: "hidden",
-                    backgroundImage: p.cardImage
-                      ? undefined
-                      : "repeating-linear-gradient(135deg, var(--panel) 0px, var(--panel) 8px, var(--bg) 8px, var(--bg) 16px)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginBottom: 24,
-                  }}
-                >
-                  {p.cardImage ? (
+                {p.cardImage ? (
+                  <div
+                    style={{
+                      border: "1px solid var(--line)",
+                      borderRadius: 3,
+                      overflow: "hidden",
+                      lineHeight: 0,
+                      marginBottom: 24,
+                    }}
+                  >
                     <img
                       src={`${import.meta.env.BASE_URL}${p.cardImage.replace(/^\//, "")}`}
                       alt={`${p.name} screenshot`}
                       loading="lazy"
-                      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
+                      style={{ width: "100%", height: "auto", display: "block" }}
                     />
-                  ) : (
-                    <span
-                      style={{
-                        fontFamily: "'IBM Plex Mono', monospace",
-                        fontSize: 11.5,
-                        color: "var(--muted2)",
-                        background: "var(--bg)",
-                        padding: "7px 12px",
-                        border: "1px solid var(--line)",
-                      }}
-                    >
-                      {p.shot}
-                    </span>
-                  )}
-                </div>
+                  </div>
+                ) : null}
                 <div style={{ background: "var(--panel)", border: "1px solid var(--line)", borderRadius: 3, padding: "26px 28px", display: "flex", flexDirection: "column", gap: 20 }}>
                   <InfoRow label="The problem" text={p.problem} />
                   <div style={{ height: 1, background: "var(--line3)" }} />
