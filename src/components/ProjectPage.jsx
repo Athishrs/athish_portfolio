@@ -194,7 +194,9 @@ export default function ProjectPage() {
             </div>
           ) : (
             <p className="mt-4 text-sm text-[var(--muted)]">
-              Add screenshots to showcase the final product.
+              {project.shot?.toLowerCase().includes("no ui")
+                ? "No UI here — it's a backend service, not a product with a screen."
+                : "Add screenshots to showcase the final product."}
             </p>
           )}
         </aside>

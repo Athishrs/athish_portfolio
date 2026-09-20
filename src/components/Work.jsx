@@ -128,7 +128,7 @@ export default function Work() {
               <div>
                 <div
                   style={{
-                    aspectRatio: "4 / 3",
+                    aspectRatio: p.cardImage ? "16 / 10" : "4 / 3",
                     border: "1px solid var(--line)",
                     borderRadius: 3,
                     overflow: "hidden",
@@ -146,7 +146,7 @@ export default function Work() {
                       src={`${import.meta.env.BASE_URL}${p.cardImage.replace(/^\//, "")}`}
                       alt={`${p.name} screenshot`}
                       loading="lazy"
-                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
                     />
                   ) : (
                     <span

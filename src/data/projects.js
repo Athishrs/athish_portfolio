@@ -19,7 +19,7 @@ export const projects = [
       "A FastAPI retrieval service over PostgreSQL and pgvector: ingestion, recursive chunking, batched 1024-dimension embeddings and cosine-similarity retrieval, on an async routes → services → database split.",
     outcome:
       "Every response carries its sources. Containerized with Docker, running on Kubernetes, with GitHub Actions handling tests, image builds and deploys.",
-    shot: "query + cited sources UI screenshot",
+    shot: "API service — no UI, request/response only",
     tech: ["FastAPI", "PostgreSQL", "pgvector", "SQLAlchemy", "Voyage AI", "Gemini", "Docker", "Kubernetes", "Helm", "GitHub Actions"],
     stack: ["FastAPI", "pgvector", "SQLAlchemy", "Voyage AI", "Gemini", "Kubernetes"],
     highlights: [
