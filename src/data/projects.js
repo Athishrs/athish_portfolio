@@ -78,6 +78,7 @@ export const projects = [
     outcome:
       "Nineteen automated tests passing against real containers via JUnit 5, Mockito and Testcontainers. Deployed on Elastic Beanstalk, RDS, S3 and CloudFront.",
     shot: "tenant booking dashboard screenshot",
+    cardImage: "/Slotora/slotora-landing.png",
     tech: ["Java 21", "Spring Boot", "React", "PostgreSQL", "JWT", "Testcontainers", "JUnit 5", "Mockito", "AWS Elastic Beanstalk", "RDS", "S3", "CloudFront"],
     stack: ["Java 21", "Spring Boot", "React", "PostgreSQL", "Testcontainers", "AWS"],
     highlights: [
@@ -108,7 +109,12 @@ export const projects = [
       skills:
         "Java/Spring Boot backend design, multi-tenant architecture, JWT auth, container-based integration testing, and AWS deployment.",
     },
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/Slotora/slotora-landing.png",
+        alt: "Slotora landing page with booking hero, upcoming appointments panel, and trusted-salon logos.",
+      },
+    ],
     links: {
       live: "https://slotora-steel.vercel.app",
       repo: "https://github.com/Athishrs/slotora",
@@ -136,6 +142,7 @@ export const projects = [
     outcome:
       "Covered end to end with Supertest API tests and Playwright browser tests, deployed across Vercel, Render and Supabase.",
     shot: "expense split + chore schedule screenshot",
+    cardImage: "/RoommateHarmony/expenses-page.png",
     tech: ["React 18", "Vite", "Shadcn UI", "Express", "Prisma", "Supabase", "JWT", "bcrypt", "Supertest", "Playwright", "Vercel", "Render"],
     stack: ["React 18", "Vite", "Shadcn UI", "Express", "Prisma", "Playwright"],
     highlights: [
@@ -149,7 +156,7 @@ export const projects = [
       teamSize: "Solo",
       duration: "2026",
       figma: "",
-      live: "",
+      live: "https://roomate-harmony-web-client.vercel.app",
       repo: "https://github.com/Athishrs/Roomate-harmony-web",
     },
     contributions: [
@@ -166,9 +173,38 @@ export const projects = [
       skills:
         "React/Vite frontend architecture, Prisma/Supabase data modeling, JWT auth, and end-to-end testing with Playwright and Supertest.",
     },
-    screenshots: [],
+    screenshots: [
+      {
+        src: "/RoommateHarmony/expenses-page.png",
+        alt: "Expenses page showing total this month, unsettled/settled counts, and a receipt breakdown.",
+      },
+      {
+        src: "/RoommateHarmony/chores-page.png",
+        alt: "Chores list page for keeping the household running.",
+      },
+      {
+        src: "/RoommateHarmony/chores-calendar.png",
+        alt: "Chores calendar view with a scheduled chore on the month grid.",
+      },
+      {
+        src: "/RoommateHarmony/hangout-page.png",
+        alt: "Hangouts page for coordinating household plans.",
+      },
+      {
+        src: "/RoommateHarmony/issues-page.png",
+        alt: "Issues page for tracking household problems.",
+      },
+      {
+        src: "/RoommateHarmony/profile-page.png",
+        alt: "User profile page.",
+      },
+      {
+        src: "/RoommateHarmony/group-settings.png",
+        alt: "Group settings page for managing household members.",
+      },
+    ],
     links: {
-      live: "",
+      live: "https://roomate-harmony-web-client.vercel.app",
       repo: "https://github.com/Athishrs/Roomate-harmony-web",
     },
     timeline: "2026 • Solo build",
@@ -194,6 +230,7 @@ export const projects = [
     outcome:
       "Vendors and customers can message directly, negotiate price, and leave reviews — turning a static listing into an ongoing relationship, with a modular backend ready to grow.",
     shot: "vendor–customer negotiation UI screenshot",
+    cardImage: "/SmallBizz/smallbizz-landing.png",
     tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "Git", "GitHub", "GitHub Pages", ".env"],
     stack: ["Node.js", "Express", "JavaScript", "Git", "GitHub Pages"],
     highlights: [
@@ -265,6 +302,7 @@ export const projects = [
     outcome:
       "Endpoints were validated end-to-end in Postman before frontend integration, and sample payloads were shared with the UI team to unblock recipe card and detail rendering.",
     shot: "recipe search + filters UI screenshot",
+    cardImage: "/dishcovery%20images/home%20page.png",
     tech: ["Node.js", "JWT", "Spoonacular API", "Postman", "GitHub", "VS Code", "React (team)", "Vite (team)", "TailwindCSS (team)"],
     stack: ["Node.js", "JWT", "Spoonacular API", "React", "Vite", "Tailwind"],
     highlights: [
