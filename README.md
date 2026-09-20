@@ -2,7 +2,7 @@
 
 A personal portfolio built with React, Vite, and Tailwind CSS.
 
-**Live:** https://athishrs.github.io/athish_portfolio/
+**Live:** https://athishrs-portfolio.netlify.app/
 
 ## Stack
 
@@ -33,15 +33,12 @@ npm run dev
 npm run build
 ```
 
-Outputs to `dist/`. The build also copies `dist/index.html` to `dist/404.html` so client-side routes resolve correctly when served as a static site (needed for GitHub Pages).
+Outputs to `dist/`.
 
 ## Deployment
 
-This repo deploys automatically to **GitHub Pages** via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on every push to `main`.
+This repo deploys to **Netlify**, connected to this GitHub repo — every push to `main` triggers a new build and deploy automatically (config in [`netlify.toml`](netlify.toml)).
 
-One-time setup (only needed once, by a repo admin):
+Client-side routes (e.g. `/projects/slotora`) resolve correctly on refresh/direct link via the SPA redirect rule in `netlify.toml` and [`public/_redirects`](public/_redirects), which fall back all paths to `index.html`.
 
-1. Go to the repo's **Settings → Pages**.
-2. Under **Build and deployment → Source**, select **GitHub Actions**.
-
-After that, every push to `main` builds and publishes automatically — no manual deploy steps.
+The app is served from the site root (`base: '/'` in `vite.config.js`) — no subpath, unlike a GitHub Pages project site.
