@@ -1,4 +1,4 @@
-# Athish Ravi Shankar — Portfolio
+# Athish Radhika Srinivasa Perumal — Portfolio
 
 A personal portfolio built with React, Vite, and Tailwind CSS.
 

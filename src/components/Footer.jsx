@@ -61,7 +61,7 @@ export default function Footer() {
           textAlign: "center",
         }}
       >
-        © {new Date().getFullYear()} Athish Ravi Shankar.
+        © {new Date().getFullYear()} Athish Radhika Srinivasa Perumal.
       </p>
     </footer>
   );
