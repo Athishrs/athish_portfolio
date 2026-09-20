@@ -69,9 +69,7 @@ export default function Work() {
                   </span>
                 </div>
                 <h3 style={{ fontFamily: "'Newsreader', Georgia, serif", fontWeight: 400, fontSize: "var(--fs-h3)", lineHeight: 1.08, margin: "0 0 20px", letterSpacing: "-0.028em" }}>
-                  <Link to={`/projects/${p.slug}`} className="link-hover">
-                    {p.name}
-                  </Link>
+                  {p.name}
                 </h3>
                 <p style={{ fontFamily: "'Newsreader', Georgia, serif", fontSize: "var(--fs-tagline)", lineHeight: 1.45, color: "var(--ink2)", margin: "0 0 30px", textWrap: "pretty" }}>
                   {p.tagline}
@@ -114,15 +112,14 @@ export default function Work() {
                     >
                       Live site
                     </a>
-                  ) : (
-                    <Link
-                      to={`/projects/${p.slug}`}
-                      className="pill-outline"
-                      style={{ padding: "10px 19px", border: "1px solid var(--line2)", color: "var(--ink3)", borderRadius: 999 }}
-                    >
-                      Case study
-                    </Link>
-                  )}
+                  ) : null}
+                  <Link
+                    to={`/projects/${p.slug}`}
+                    className="pill-outline"
+                    style={{ padding: "10px 19px", border: "1px solid var(--line2)", color: "var(--ink3)", borderRadius: 999 }}
+                  >
+                    Learn more →
+                  </Link>
                 </div>
               </div>
               <div>
